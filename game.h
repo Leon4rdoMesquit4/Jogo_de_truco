@@ -66,3 +66,4 @@ void startATurn(Game *game, Round *round, Turn *turn, bool *break_while);
 void removeCard(Player *player, int card_index);
 bool checkRoundWinner(Round *round, int last_turn);
 void showLastPlayerCard(Round *round, int last_turn, int player_id);
+void clearTerminal();

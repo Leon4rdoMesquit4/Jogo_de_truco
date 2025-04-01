@@ -19,7 +19,7 @@ void startGame()
     game->round_number = 1;
     game->turn_number = 1;
 
-    // system("clear");
+    clearTerminal();
 
     for (int i = 0; i < num_players; i++)
     {
@@ -30,7 +30,7 @@ void startGame()
 
         printf("Coloque o nome do jogador %d: ", i + 1);
         scanf("%49s", game->players[i].name);
-        system("clear");
+        clearTerminal();
     }
 
     while (game->players[0].score < 12 && game->players[1].score < 12)
@@ -99,7 +99,7 @@ void endRound(Game *game, int winner_id, int point_value)
     fflush(stdin); 
     getchar();
     fflush(stdin); 
-    system("clear");
+    clearTerminal();
 }
 
 void startATurn(Game *game, Round *round, Turn *turn, bool *break_while)
@@ -122,7 +122,7 @@ void startATurn(Game *game, Round *round, Turn *turn, bool *break_while)
             game->current_player_id = 0;
         }
 
-        system("clear");
+        clearTerminal();
 
         if (break_while)
         {
@@ -148,7 +148,7 @@ void startATurn(Game *game, Round *round, Turn *turn, bool *break_while)
         fflush(stdin); 
         getchar();
         fflush(stdin); 
-        system("clear");
+        clearTerminal();
     }
 }
 }

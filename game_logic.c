@@ -342,3 +342,12 @@ bool checkRoundWinner(Round *round, int last_turn)
 
     return false;
 }
+
+void clearTerminal()
+{
+#ifdef _WIN32
+    system("cls"); 
+#else
+    system("clear"); 
+#endif
+}
