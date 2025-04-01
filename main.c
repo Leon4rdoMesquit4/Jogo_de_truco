@@ -38,6 +38,16 @@ void startGame()
         startNewRound(game);
     }
 
+    printf("Fim do jogo!\n");
+    if (game->players[0].score > game->players[1].score)
+    {
+        printf("Jogador %s ganhou o jogo!\n", game->players[0].name);
+    }
+    else if (game->players[1].score > game->players[0].score)
+    {
+        printf("Jogador %s ganhou o jogo!\n", game->players[1].name);
+    }
+    
     free(game->players);
     free(game);
 }
